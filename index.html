@@ -20,16 +20,17 @@
     </div>
   </header>
 
-  <!-- SIDEBAR -->
-  <div class="sidebar">
-    <span class="close-btn">&times;</span>
-    <a href="index.html">Beranda</a>
-    <a href="info.html">Info Pesantren</a>
-    <a href="fasilitas.html">Fasilitas</a>
-    <a href="kegiatan.html">Kegiatan</a>
-    <a href="ppdb.html">PPDB</a>
-    <a href="tentang.html">Tentang</a>
-  </div>
+  <!-- SIDEBAR --><div class="sidebar">
+  <a href="index.html">Beranda</a>
+  <a href="info.html">Info Pesantren</a>
+  <a href="fasilitas.html">Fasilitas</a>
+  <a href="kegiatan.html">Kegiatan</a>
+  <a href="PPDB.html">PPDB</a>
+
+  <!-- Tambahkan ini di paling bawah -->
+  <button id="logoutBtn" class="logout-btn">Logout</button>
+</div>
+
 
   <!-- OVERLAY -->
   <div class="overlay"></div>
@@ -77,5 +78,20 @@ Menanamkan nilai-nilai kejujuran, disiplin, tanggung jawab, dan kepedulian sosia
   </footer>
 
   <script src="script.js"></script>
+  <script type="module" src="auth-check.js"></script>
+  <script type="module">
+  import { auth } from "./firebase.js";
+  import { signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+  const logoutBtn = document.getElementById("logoutBtn");
+  logoutBtn.addEventListener("click", async () => {
+    try {
+      await signOut(auth);
+      window.location.href = "login.html";
+    } catch (err) {
+      alert("Gagal logout: " + err.message);
+    }
+  });
+</script>
 </body>
 </html>

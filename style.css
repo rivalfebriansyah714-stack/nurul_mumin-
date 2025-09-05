@@ -682,3 +682,72 @@ body.dark .ppdb-form label {
   color: #fff !important;
   outline: none; /* hapus garis fokus */
 }
+/* LOGIN & REGISTER */
+.auth-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f4f6f9;
+}
+.auth-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+.auth-logo {
+  width: 80px;
+  margin-bottom: 15px;
+}
+.auth-container h2 {
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+.auth-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.auth-container button {
+  width: 100%;
+  padding: 10px;
+  background: #2e7d32;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.auth-container button:hover {
+  background: #1b5e20;
+}
+.auth-container p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+.auth-container a {
+  color: #2e7d32;
+  text-decoration: none;
+  font-weight: bold;
+}
+.logout-btn {
+  width: 100%;
+  padding: 12px;
+  background: #1b5e20; /* hijau tua */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: auto; /* dorong ke bawah */
+  font-weight: bold;
+}
+
+.logout-btn:hover {
+  background: #145a14; /* lebih gelap saat hover */
+}
